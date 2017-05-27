@@ -6,6 +6,8 @@ const
     app = express(),
     port = 3000;
 
+app.set('x-powered-by', false);
+
 app.use('/', function (req, res, next) {
     console.log('Request URL: ' + req.url);
     next()
