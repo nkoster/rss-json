@@ -1,15 +1,19 @@
-A very simple RSS to JSON convertion API.
+A very simple RSS to JSON conversion API.
 
 ### Install
 
+Quick.
+
 ~~~bash
-git clone git@github.com:nkoster/rss-json
-cd feed-to-json
-npm install
-node server.js
+mkdir rss-json-api
+cd rss-json-api
+npm init -y
+npm install --save rss-json
+node node_modules/rss-json/server.js
 ~~~
 
-In a browser: http://localhost:3000/json/?rss=http://feeds.bbci.co.uk/news/rss.xml
+In a browser:
+http://localhost:3000/json/?rss=http://feeds.bbci.co.uk/news/rss.xml
 
 This will return an object:
 
