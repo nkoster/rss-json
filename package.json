@@ -1,6 +1,6 @@
 {
   "name": "rss-json",
-  "version": "1.0.1",
+  "version": "1.0.1a",
   "description": "Convert RSS content to JSON response",
   "main": "server.js",
   "scripts": {
