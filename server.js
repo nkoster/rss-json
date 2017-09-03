@@ -15,10 +15,11 @@ app.use('/', function (req, res, next) {
 
 app.get('/json', function (req, res) {
     if (req.query.rss) {
-
         Feed.getRssAtom(req.query.rss, function (rss) {
             res.send(rss)
         })
+    } else {
+        res.send('Usage: /json?rss=URL')
     }
 });
 
