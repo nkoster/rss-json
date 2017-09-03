@@ -1,11 +1,7 @@
 'use strict';
 
-process.on('uncaughtException', function(err) {
-    console.log('Caught exception: ' + err);
-});
-
 const
-    Feed = require('rss-to-json'),
+    Feed = require('get-rss-atom'),
     express = require('express'),
     app = express(),
     port = 3000;
@@ -19,15 +15,10 @@ app.use('/', function (req, res, next) {
 
 app.get('/json', function (req, res) {
     if (req.query.rss) {
-        Feed.load(req.query.rss, function (err, rss) {
-            if (err) {
-                res.send("error");
-            } else {
-                res.send(rss)
-            }
+
+        Feed.getRssAtom(req.query.rss, function (rss) {
+            res.send(rss)
         })
-    } else {
-        res.send('Please use ?rss= format')
     }
 });
 
