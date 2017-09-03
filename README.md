@@ -3,7 +3,7 @@ A very simple RSS to JSON convertion API.
 ### Install
 
 ~~~bash
-git clone git@github.com:nkoster/feed-to-json
+git clone git@github.com:nkoster/rss-json
 cd feed-to-json
 npm install
 node server.js
