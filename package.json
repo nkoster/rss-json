@@ -1,7 +1,7 @@
 {
-  "name": "feed-to-json",
-  "version": "1.0.0",
-  "description": "Converts RSS content to JSON response",
+  "name": "rss-json",
+  "version": "1.0.1",
+  "description": "Convert RSS content to JSON response",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
