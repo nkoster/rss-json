@@ -1,5 +1,5 @@
 {
-  "name": "RSS-to-JSON",
+  "name": "feed-to-json",
   "version": "1.0.0",
   "description": "Converts RSS content to JSON response",
   "main": "server.js",
