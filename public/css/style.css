@@ -13,9 +13,6 @@ body {
     font-size: 100%;
     background: white;
 }
-.rssblock {
-    padding: 6px;
-}
 .gotham {
     font-family: "gothambook";
 }
@@ -59,20 +56,6 @@ a.feed:hover {
 }
 a.feed:visited {
     color: #999;
-}
-.oops {
-    color: white;
-    background: #f66;
-    border-radius: 20px;
-    font-weight: bold;
-    font-family: serif;
-    font-size: 16px;
-}
-hr {
-    border: 0;
-    color: #bbb;
-    background-color: #bbb;
-    height: 1px;
 }
 #top {
     height: 14px;
