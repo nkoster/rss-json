@@ -8,10 +8,7 @@ const
 
 app.set('x-powered-by', false);
 
-app.use('/', function (req, res, next) {
-    console.log(`Request URL: ${req.url}`);
-    next()
-});
+app.use(express.static(__dirname + '/public'));
 
 app.get('/json', function (req, res) {
     if (req.query.rss) {
