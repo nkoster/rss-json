@@ -1,32 +1,13 @@
-A very simple RSS to JSON conversion API.
+This will be the NodeJS replacement for the PHP version of beefeeds.nl (.com).
 
 ### Install
 
-Quick.
-
 ~~~bash
-mkdir rss-json-api
-cd rss-json-api
-npm init -y
-npm install --save rss-json
-node node_modules/rss-json/server.js
+git clone git@github.com:nkoster/rss-json
+cd rss-json
+npm instal
+node server.js
 ~~~
 
 In a browser:
-http://localhost:3000/json/?rss=http://feeds.bbci.co.uk/news/rss.xml
-
-This will return an object:
-
-~~~javascript
-{
-    title: String,
-    items: Array [
-        {
-            title: String,
-            content: String,
-            href: String
-        },
-        ...
-    ]
-}
-~~~
+http://localhost:3000
