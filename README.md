@@ -5,7 +5,7 @@ This will be the NodeJS replacement for the PHP version of beefeeds.nl (.com).
 ~~~bash
 git clone git@github.com:nkoster/rss-json
 cd rss-json
-npm instal
+npm update
 node server.js
 ~~~
 
