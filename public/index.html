@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>beefeeds</title>
+    <script src="js/jq.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/bee_16x16.png">
+</head>
+<body>
+<div id="main">
+<div class="list"></div>
+<script>
+    var rssList = [
+        "http://www.nu.nl/rss/algemeen",
+        "https://www.parool.nl/rss.xml",
+        "http://www.at5.nl/feeds/at5/nieuws/V100/nieuws",
+        "http://www.rijnmond.nl/rss",
+        "http://rss.fok.nl/feeds/nieuws",
+        "https://www.geenstijl.nl/feeds/recent.atom",
+        "http://feeds.webwereld.nl/webwereld",
+        "http://www.hln.be/bizar/rss.xml",
+        "http://feeds.feedburner.com/tweakers/mixed",
+        "https://www.rt.com/rss/news/",
+        "http://feeds.bbci.co.uk/news/rss.xml",
+        "http://rss.cnn.com/rss/edition.rss"
+    ];
+    rssList.forEach(function (rss) {
+        $.get('/json?rss=' + rss, function (data) {
+            $("div.list").append('<a class="gotham" href="' + data.href + '">' +
+                data.title + ' <img src="img/rssgreen.png" alt=""></a> &nbsp; &nbsp; ');
+            data.items.forEach(function (item) {
+                $("div.list").append('<a class="feed" href="' + item.href + '" title="' +
+                    item.content.replace(/&lt;.*?&gt;/g, '') +
+                    '" target="_blank">' + item.title +
+                    '</a><a href="https://www.google.com/search?q=' +
+                    item.title.replace(/ /g, '+') + '" title="Google search: ' +
+                    item.title + '" target="_blank" class="feed">•</a>&nbsp; &nbsp; ')
+            });
+            $('div.list').append('<br>&nbsp;<br>')
+        })
+    });
+</script>
+&nbsp;<br>
+</div>
+</body>
+</html>
